@@ -9,6 +9,10 @@ module.exports = {
         lg: '976px',
         xl: '1440px',
       },
+      fontFamily: {
+        sans: ['Merriweather Sans', 'sans-serif'],
+        serif: ['Merriweather Serif', 'serif'],
+      },
     },
   },
   plugins: [],
