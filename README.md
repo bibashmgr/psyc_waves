@@ -1,38 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Three.js Boilerplate
 
-## Getting Started
+A boilerplate/starter project for quickly building three.js app using Vite & Three.
 
-First, run the development server:
+## Quick Start:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+__Clone the repo:__
+
+```
+git clone --depth 1 https://github.com/bibashmgr/vite-three-js-boilerplate
+cd vite-three-js-boilerplate
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+__Install the dependencies:__
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Commands:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+__Run app in development:__
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+npm run dev
+```
 
-## Learn More
+## Packages:
 
-To learn more about Next.js, take a look at the following resources:
+| Package                                         | Version                                                                    |
+| ----------------------------------------------- | :------------------------------------------------------------------------- |
+| [vite](packages/vite)                           | ![vite version](https://img.shields.io/npm/v/vite.svg?label=%20)           |
+| [three](packages/three)                         | ![three](https://img.shields.io/npm/v/three?label=%20)                     |
+| [events](packages/three)                        | ![events](https://img.shields.io/npm/v/events?label=%20)                   |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+public\
+  |--models\
+  |--textures\
+src\
+  |--config\        # Environment variables and configuration related things
+  |--helpers\       # Helper classes and functions
+  |--scenes\        # Scenes and Objects logic
+  |--utils\         # Utility classes and functions
+  |--camera.js
+  |--experience.js
+  |--renderer.js
+index.html
+main.js
+style.css
+```
