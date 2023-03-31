@@ -31,7 +31,7 @@ button:hover {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    z-index: 99;
+    z-index: 1;
 }
 
 .experience-canvas{
@@ -44,7 +44,7 @@ button:hover {
     top: 0px;
     left: 0px;
     right: 0px;
-    z-index: 998;
+    z-index: 9;
 }
 
 .navbar{
@@ -53,10 +53,10 @@ button:hover {
     left: 0px;
     right: 0px;
     margin: 0px auto;
-    z-index: 999;
     width: 50%;
     height: 3.5rem;
     display: flex;
+    z-index: 999;
     justify-content: space-between;
     align-items: center;
     padding: 0px 1.5rem;
@@ -64,7 +64,10 @@ button:hover {
     border-radius: 2rem;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5rem);
+    -webkit-backdrop-filter: blur(5rem) ;
+    -moz-backdrop-filter: blur(5rem) ;
 }
+
 .navbar-app-logo{
     width: 24px;
     height: 24px;
@@ -138,12 +141,15 @@ button:hover {
         width: calc(100vw - 2.5rem);
         left: 1.25rem;
         right: 1.25rem;
+        top: 2rem;
     }
     
     .hero-section-title {
         padding: 0rem 1.25rem;
+        margin: 0px;
         width: 100%;
         font-size: 1.75rem;
+        line-height: 1.75rem;
     }
 }
 
