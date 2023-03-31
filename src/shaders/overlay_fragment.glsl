@@ -112,7 +112,7 @@ void main() {
     float hue = uHue + shadow * .1 + cnoise(vec2(elevation * .10, .1 + t)) * uHueVariation;
     float saturation = .6;
     ;
-    float brightness = -(1.0 - shadow) * .1 + .5 - smoothstep(0.0, .9, cnoise(vec2(elevation * .5, .4 + t * 5.0))) * .01;
+    float brightness = -(1.0 - shadow) * .1 + .5 - smoothstep(0.0, .9, cnoise(vec2(elevation * .5, .4 + t * 5.0))) * 0.1;
 
     vec3 hslCol = vec3(hue, saturation, brightness);
     vec3 col = hsl2rgb(hslCol) * vec3(light, 1.0, 1.0);

@@ -13,18 +13,18 @@ export default class Camera {
 
     this.createPerspectiveCamera();
     this.createOrthographicCamera();
-    this.setOrbitControls();
+    // this.setOrbitControls();
   }
 
   createPerspectiveCamera() {
     this.perspectiveCamera = new THREE.PerspectiveCamera(
-      35,
+      45,
       this.sizes.aspect,
       0.1,
       1000
     );
 
-    this.perspectiveCamera.position.z = 1;
+    this.perspectiveCamera.position.z = 100;
 
     this.scene.add(this.perspectiveCamera);
   }
@@ -40,19 +40,6 @@ export default class Camera {
     );
 
     this.scene.add(this.orthographicCamera);
-    this.orthographicCamera.position.z = 1;
-
-    // this.helper = new THREE.CameraHelper(this.orthographicCamera);
-    // this.scene.add(this.helper);
-
-    // const size = 10;
-    // const divisions = 10;
-
-    // const gridHelper = new THREE.GridHelper(size, divisions);
-    // this.scene.add(gridHelper);
-
-    // const axesHelper = new THREE.AxesHelper(size / 2);
-    // this.scene.add(axesHelper);
   }
 
   setOrbitControls() {
@@ -78,6 +65,6 @@ export default class Camera {
   }
 
   update() {
-    this.orbitControls.update();
+    // this.orbitControls.update();
   }
 }

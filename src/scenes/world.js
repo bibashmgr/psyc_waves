@@ -4,7 +4,7 @@ import * as THREE from 'three';
 import Experience from '../experience.js';
 
 // scenes
-import Environment from './environment.js';
+// import Environment from './environment.js';
 import Overlay from './overlay.js';
 
 export default class World {
@@ -14,19 +14,26 @@ export default class World {
     this.resources = this.experience.resources;
 
     this.resources.on('ready', () => {
-      this.environment = new Environment();
-      this.box = new Overlay();
+      // this.environment = new Environment();
+      this.overlay = new Overlay();
     });
   }
 
   resize() {}
 
   update() {
-    if (this.box) {
-      this.box.update();
+    if (this.overlay) {
+      this.overlay.update();
     }
-    if (this.environment) {
-      this.environment.update();
+
+    // if (this.environment) {
+    //   this.environment.update();
+    // }
+  }
+
+  cursorMove() {
+    if (this.overlay) {
+      this.overlay.cursorMove();
     }
   }
 }
