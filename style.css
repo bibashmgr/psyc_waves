@@ -32,7 +32,7 @@ button:hover {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    z-index: 1;
+    z-index: 9;
 }
 
 .experience-canvas{
@@ -41,11 +41,8 @@ button:hover {
 }
 
 .app {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 9;
+    position: relative;
+    z-index: 99;
 }
 
 .navbar{
@@ -86,41 +83,25 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    padding: 0rem 1.25rem;
+    padding: 2rem 1.25rem 0rem 1.25rem;
 }
 
-.hero-section p, .hero-section h1 {
+.hero-section p, .hero-section h2 {
     color: #ffffff;
-    width: 30%;
 }
 
 .hero-section p {
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
-.hero-section h1{
+.hero-section h2{
     font-weight: 700;
-    font-size: 2.5rem;
-}
-
-@media screen and (max-width: 1400px) {
-    
-}
-
-@media screen and (max-width: 1200px) {
-    .hero-section p, .hero-section h1 {
-        width: 50%;
-    }
+    font-size: 2.25rem;
 }
 
 @media screen and (max-width: 992px) {
     .navbar {
-        width: 60%;
-    }
-
-    .hero-section p, .hero-section h1 {
         width: 60%;
     }
 }
@@ -131,10 +112,6 @@ button:hover {
         left: 5rem;
         right: 5rem;
     }
-
-    .hero-section p, .hero-section h1 {
-        width: 80%;
-    }
 }
 
 @media screen and (max-width: 576px) {
@@ -143,20 +120,6 @@ button:hover {
         left: 1.25rem;
         right: 1.25rem;
         top: 2rem;
-    }
-
-    .hero-section p, .hero-section h1 {
-        width: 100%;
-    }
-
-    .hero-section p {
-        font-weight: 400;
-        font-size: 1.25rem;
-    }
-
-    .hero-section h1 {
-        font-weight: 700;
-        font-size: 2rem;
     }
 }
 
